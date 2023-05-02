@@ -93,7 +93,7 @@ For a video walkthrough of setting up VS Code and PlatformIO, [follow this link]
 ### Download VS Code
 Firstly, you will need to install VS Code from https://code.visualstudio.com/download. Make sure to select correct download link for your computer's Operating System.
 
-![](images/VSCode_Download.png)
+![](images/VSCode.png)
 
 Once downloaded, you can open the installer in your Downloads folder and follow the on-screen instructions to finish the installation.
 
@@ -107,7 +107,7 @@ For every new M5StickC-Plus project, you will need to create a PlatformIO projec
 
 After installing PlatformIO, a new tab should appear on the left side of the IDE.
 
-![](images/PlatformIO_Tab.png)
+![](images/PlatformIO_Tab.PNG)
 
 Open the tab and select either *Create New Project* or *Home*. From here you can create a new project and give it a name.
 
@@ -128,7 +128,7 @@ In PlatformIO, libraries are downloaded locally for each project so you will nee
 
 After downloading the library, you should be able t see it inside the project folder: .pio -> libdeps -> m5stick-c -> M5StickCPlus
 
-![](images/PlatformIO_Libraries.png)
+![](images/PlatformIO_Libraries.PNG)
 
 ### Uploading Code
 Before starting to code your own projects, it is worth uploading an empty sketch to the M5Stick to ensure everything is working correctly. Make sure your M5Stick is switch on and connected to your computer via USB.
