@@ -25,7 +25,7 @@
     - [Useful Links](#useful-links)
 
 ## Introduction
-The [M5StickC-Plus](https://docs.m5stack.com/en/core/m5stickc_plus), from M5Stack, is a development board powered by the [ESP32-PICO-D4](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-pico-kit.html). It is essenstially an ESP32 board with several components and a plastic housing for an all-in-one programmable board without the need for soldering or breadboards (if you want).   
+The [M5StickC-Plus](https://docs.m5stack.com/en/core/m5stickc_plus), from M5Stack, is a development board powered by the ESP32-PICO-D4 chip. It is essenstially an [ESP32 PICO board](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-pico-kit.html) with several components and a plastic housing for an all-in-one programmable board without the need for soldering or breadboards (if you want).   
 
 The board is only 48.2mm x 25.5mm x 13.7mm in size and has been designed to be used in the prototyping of IoT devices. As such, the M5StickC-Plus has WiFi and Bluetooth modules that allow boards to the ability to connect to other devices as well as each other.
 
