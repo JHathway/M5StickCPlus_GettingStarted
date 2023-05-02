@@ -133,6 +133,8 @@ You can now upload to the M5Stick using the Upload icon at the top-left corner o
 
 If you see any error messages pop up in the console, ensure you have followed all of the previous steps correctly. If you are still being shown error messages and are unsure of why, feel free to contact support via email: DigiDevECA@ed.ac.uk.
 
+[Next Sextion](#hello-world)
+
 ### PlatformIO
 Although the Arduino IDE offers a simple UI and a few features for programming the M5StickC-Plus, it is lacking in other features that more experienced programmers may be used to. Arduino does not easily support extensions or Git control, and also the fact that libraries are global across all projects can cause issues if library updates cause older projects to stop working. You may even find that the Arduino IDE takes a long time to compile code for the M5StickC-Plus board.
 
