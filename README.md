@@ -14,14 +14,11 @@
         - [Set up Project](#set-up-project)
         - [Install Libraries](#install-libraries)
         - [Uploading Code](#upload-code-1)
-    - [Starter Code](#starter-code)
-        - [Hello World](#hello-world)
+    - [Hello World](#hello-world)
+    - [Resources](#resources)
         - [M5Stack Examples](#m5stack-examples)
-
-
-
-- [M5Stack Arduino Documentation](https://docs.m5stack.com/en/quick_start/m5stickc_plus/arduino)
-- [M5Stack API Documentation](https://docs.m5stack.com/en/api/stickc/system_m5stickc)
+        - [Tutorial Videos](#tutorial-videos)
+        - [Useful Links](#useful-links)
 
 ![](images/m5stickcplus_01.png)
 
@@ -155,8 +152,7 @@ To upload, select the Upload icon at the bottom-left of the IDE.
 
 If you see any error messages pop up in the console, ensure you have followed all of the previous steps correctly. If you are still being shown error messages and are unsure of why, feel free to contact support via email: DigiDevECA@ed.ac.uk.
 
-## Starter Code
-### Hello World
+## Hello World
 To get started programming the M5StickC-Plus, a simple "Hello World" sketch might be a nice place to start.
 
 First of all, for every M5StickC-Plus project, you should include the M5StickCPlus library at the top of the code.
@@ -184,6 +180,7 @@ void loop() {
 
 This short sketch should print out the words "Hello World" to the LCD screen every second.
 
+## Resources
 ### M5Stack Examples
 The M5StickCPlus library contains examples that we can use to immediately start programming the M5StickC-Plus. These examples include tutorials on how to use some of the functions in the M5StickCPlus library as well as some games that you can try out.
 
@@ -201,3 +198,9 @@ In PlatformIO yu will have to navigate into the library directory to find these 
 - [Using the On-board Buttons](https://media.ed.ac.uk/media/Using%20the%20M5StickC%20Plus%20Buttons/1_lcty4juu)
 - [Connecting to WiFi](https://media.ed.ac.uk/media/Connect%20M5StickC%20Plus%20to%20WiFi/1_v0f5n2bl)
 - [Sending OSC Messages](https://media.ed.ac.uk/media/Sending%20OSC%20Messages%20with%20M5StickC%20Plus/1_jm4bpf9v)
+
+### Useful Links
+- [M5Stack Arduino Documentation](https://docs.m5stack.com/en/quick_start/m5stickc_plus/arduino)
+- [M5Stack API Documentation](https://docs.m5stack.com/en/api/stickc/system_m5stickc)
+- [PlatformIO](https://platformio.org/)
+- [These tutorials](https://randomnerdtutorials.com/projects-esp32/) are for familiarizing with the ESP32 board. You will just need to add the M5StickCPlus.h library and M5.begin() function to these examples for them to work with M5StickC-Plus.
