@@ -9,7 +9,8 @@
 - [M5Stack Arduino Documentation](https://docs.m5stack.com/en/quick_start/m5stickc_plus/arduino)
 - [M5Stack API Documentation](https://docs.m5stack.com/en/api/stickc/system_m5stickc)
 
-![](images/m5stickcplus_01)
+![](images/m5stickcplus_01.png)
+
 
 ## Introduction
 ### Basic Functions
