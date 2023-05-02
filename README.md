@@ -171,6 +171,8 @@ You will also need to select the board you are using from the dropdown menu. Mak
 
 Upon creating a new project, a new window will be created with your project folder. Most of this can be ignored, as the majority of what you will be working on will be inside the *src* folder. This includes th main.cpp file that we will be putting most of our code.
 
+![](images/PlatformIO_src.gif)
+
 #### Install Libraries
 In order to make the most of the M5StickC-Plus board, you will need to install the M5StickCPlus library. This contains functions for much easier control of the on-board components, such as the LCD screen, IMU, buttons etc.
 
