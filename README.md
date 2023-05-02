@@ -1,8 +1,12 @@
 # Getting started with the M5StickCPlus
 
-- [Getting started with the M5StickCPlus](#getting-started-with-the-m5stickcplus)
-    - [Introduction](#introduction)
+![](images/m5stickcplus_01.png)
+
+## Contents
+- [Introduction](#introduction)
     - [Basic Functions](#basic-functions)
+    - [Features](#features)
+- [Programming](#programming-the-m5stickcplus)
     - [Arduino IDE](#arduino-ide)
         - [Download](#downlaod-arduino-ide)
         - [Boards Manager](#boards-manager)
@@ -15,31 +19,66 @@
         - [Install Libraries](#install-libraries)
         - [Uploading Code](#upload-code-1)
     - [Hello World](#hello-world)
-    - [Resources](#resources)
-        - [M5Stack Examples](#m5stack-examples)
-        - [Tutorial Videos](#tutorial-videos)
-        - [Useful Links](#useful-links)
-
-![](images/m5stickcplus_01.png)
+- [Resources](#resources)
+    - [M5Stack Examples](#m5stack-examples)
+    - [Tutorial Videos](#tutorial-videos)
+    - [Useful Links](#useful-links)
 
 ## Introduction
+The [M5StickC-Plus](https://docs.m5stack.com/en/core/m5stickc_plus), from M5Stack, is a development board powered by the [ESP32-PICO-D4](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-pico-kit.html). It is essenstially an ESP32 board with several components and a plastic housing for an all-in-one programmable board without the need for soldering or breadboards (if you want).   
+
+The board is only 48.2mm x 25.5mm x 13.7mm in size and has been designed to be used in the prototyping of IoT devices. As such, the M5StickC-Plus has WiFi and Bluetooth modules that allow boards to the ability to connect to other devices as well as each other.
+
 ### Basic Functions
+![](images/M5Stick_Buttons.png)
 
-## Videos
+To power the board:
+- ON, hold the power button for 2 seconds.
+- OFF, hold the power button for 6 seconds.
 
-## Arduino IDE
+The M5StickC-Plus can be connected to your computer via the USB-C port at the base of the board. Underneath the USB port, there is a Grove connector for connecting Grove sensors to the board.
+
+### Features
+- Wi-Fi enabled
+- Bluetooth enabled
+- LCD(1.14 inch)
+- Buttons
+- Built-in 6-Axis IMU
+- Red LED
+- IR transmitter
+- Microphone
+- RTC
+- Built-in Lithium Polymer Battery
+- Built-in Passive Buzzer
+- 5 digital/analog IO pins
+- Grove connector
+
+## Programming the M5StickCPlus
+You can program the M5StickC-Plus with a variety of platforms. These platforms include:
+- [Arduino](https://www.arduino.cc/)
+- [UIFlow](https://flow.m5stack.com/)
+- [MicroPython](http://micropython.org/)
+- [.NET nanoFramework](https://github.com/nanoframework/nanoFramework.M5Stack)
+
+For the most of this article, I will mostly be talking about programming the M5Stick using C++ with Arduino framework. 
+
+To start programming the M5Stick with Arduino framework, you will first need to decide what Integrated Development Environment (IDE) to use. For most beginner applications, the [Arduino IDE](#arduino-ide) will be perfectly suitable. However, if you would like to take advantage of various extensions and a slightly more professional environment, you may want to opt for the [PlatformIO extension to VS Code](#platformio).
+
+**Note**: you will only need to choose ONE of these options to go forward.
+
+### Arduino IDE
 For beginners, I would recommend getting started with the [Arduino](https://www.arduino.cc/) IDE. The Arduino IDE is an easy-to-use programming environment, and for those of you who have previous programming experience with Arduino, it may be a familiar interface to navigate. Even for beginners, however, the Arduino IDE has a simple layout and can be quite easy to get to grips with - especially since the release of Arduino IDE 2.0.  
 
 For a video walkthrough of setting up the Arduino IDE for programming the M5StickC-Plus, [follow this link](https://media.ed.ac.uk/media/Programming%20M5StickC%20Plus%20with%20Arduino%20IDE%202.0/1_uysgibv8). Otherwise, follow the instructions below to get started.
 
-### Download Arduino IDE
+#### Download Arduino IDE
 You will first need to download to the Arduino IDE from https://www.arduino.cc/en/software. Make sure to select correct download link for your computer's Operating System. 
 
 ![](images/Arduino_Download.png)
 
 Once downloaded, you can open the installer in your Downloads folder and follow the on-screen instructions to finish the installation.
 
-### Boards Manager
+#### Boards Manager
 In order for the IDE to be able communicate with a development board, it must be given a set of instructions of exactly how to do so. These "instructions" can be downloaded from the Boards Manager tab in the Arduino IDE. However, certain boards (including boards from M5Stack) are not directly available from the Boards Manager, and instead we have to direct the IDE to an additional URL in order to access the "instructions" for that board.
 
 To access the additional Boards Manager, navigate to the IDE Preferences:
@@ -62,7 +101,7 @@ Search for 'M5Stack', and you should now be able to see 'M5Stack by M5Stack offi
 
 ![](images/Arduino_BoardsManager.gif)
 
-### Library Manager
+#### Library Manager
 In order to make the most of the M5StickC-Plus board, you will need to install the M5StickCPlus library. This contains functions for much easier control of the on-board components, such as the LCD screen, IMU, buttons etc.
 
 Navigate to Tools -> Manage Libraries...
@@ -75,8 +114,8 @@ Search for 'M5StickCPlus', and install 'M5StickCPlus by M5Stack'. If you are ask
 
 You should now be good to go!
 
-### Uploading Code
-Before starting to code your own projects, it is worth uploading an empty sketch to the M5Stick to ensure everything is working correctly. Make sure your M5Stick is switch on and connected to your computer via USB.
+#### Uploading Code
+Before starting to code your own projects, it is worth uploading an empty sketch to the M5Stick to ensure everything is working correctly. Make sure your M5Stick is [switched on](#basic-functions) and connected to your computer via USB.
 
 You may or may not see the correct board and USB port appear automatically at the top of the IDE, like so:
 
@@ -94,26 +133,26 @@ You can now upload to the M5Stick using the Upload icon at the top-left corner o
 
 If you see any error messages pop up in the console, ensure you have followed all of the previous steps correctly. If you are still being shown error messages and are unsure of why, feel free to contact support via email: DigiDevECA@ed.ac.uk.
 
-## PlatformIO
+### PlatformIO
 Although the Arduino IDE offers a simple UI and a few features for programming the M5StickC-Plus, it is lacking in other features that more experienced programmers may be used to. Arduino does not easily support extensions or Git control, and also the fact that libraries are global across all projects can cause issues if library updates cause older projects to stop working. You may even find that the Arduino IDE takes a long time to compile code for the M5StickC-Plus board.
 
 [PlatformIO](https://platformio.org/) is a free extension to VS Code that allows users to program a variety of development boards while making use of a more professional programming environment. Although there is a little more setup and file management involved, it allows for much more control over your projects and more customizable options. 
 
 For a video walkthrough of setting up VS Code and PlatformIO, [follow this link](https://media.ed.ac.uk/media/Programming%20M5StickC%20Plus%20with%20PlatformIO/1_chpql4of). Otherwise, follow the instructions below to get started.
 
-### Download VS Code
+#### Download VS Code
 Firstly, you will need to install VS Code from https://code.visualstudio.com/download. Make sure to select correct download link for your computer's Operating System.
 
 ![](images/PlatformIO_VSCode.png)
 
 Once downloaded, you can open the installer in your Downloads folder and follow the on-screen instructions to finish the installation.
 
-### Install PlatformIO Extension
+#### Install PlatformIO Extension
 Once VS Code has installed, open the application. You can then navigate to the Extensions tab on the left-hand side of the screen. From there you can search for PlatformIO and install it as an extension.
 
 ![](images/PlatformIO_Extension.gif)
 
-### Set up Project
+#### Set up Project
 For every new M5StickC-Plus project, you will need to create a PlatformIO project. Make sure to follow these steps each time.
 
 After installing PlatformIO, a new tab should appear on the left side of the IDE.
@@ -128,7 +167,7 @@ You will also need to select the board you are using from the dropdown menu. Mak
 
 ![](images/PlatformIO_SelectBoard.gif)
 
-### Install Libraries
+#### Install Libraries
 In order to make the most of the M5StickC-Plus board, you will need to install the M5StickCPlus library. This contains functions for much easier control of the on-board components, such as the LCD screen, IMU, buttons etc.
 
 To add the M5StickCPlus library in PlatformIO, navigate to the PlatformIO tab and select *Libraries*. From here you can search for 'M5StickCPlus' and select 'M5StickCPlus by M5Stack'.
@@ -141,8 +180,8 @@ After downloading the library, you should be able t see it inside the project fo
 
 ![](images/PlatformIO_Libraries.PNG)
 
-### Uploading Code
-Before starting to code your own projects, it is worth uploading an empty sketch to the M5Stick to ensure everything is working correctly. Make sure your M5Stick is switch on and connected to your computer via USB.
+#### Uploading Code
+Before starting to code your own projects, it is worth uploading an empty sketch to the M5Stick to ensure everything is working correctly. Make sure your M5Stick is [switched on](#basic-functions) and connected to your computer via USB.
 
 You can optionally specify the USB port you want to upload to, however this is set to 'Auto' by default and will usually select the right port.
 
