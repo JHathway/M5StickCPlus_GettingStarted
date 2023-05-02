@@ -93,7 +93,7 @@ For a video walkthrough of setting up VS Code and PlatformIO, [follow this link]
 ### Download VS Code
 Firstly, you will need to install VS Code from https://code.visualstudio.com/download. Make sure to select correct download link for your computer's Operating System.
 
-![](images/VSCode.png)
+![](images/PlatformIO_VSCode.png)
 
 Once downloaded, you can open the installer in your Downloads folder and follow the on-screen instructions to finish the installation.
 
