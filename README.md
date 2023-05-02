@@ -1,3 +1,23 @@
+# Getting started with the M5StickCPlus
+
+- [Getting started with the M5StickCPlus](#getting-started-with-the-m5stickcplus)
+    - [Introduction](#introduction)
+    - [Basic Functions](#basic-functions)
+    - [Arduino IDE](#arduino-ide)
+        - [Download](#downlaod-arduino-ide)
+        - [Boards Manager](#boards-manager)
+        - [Library Manager](#library-manager)
+        - [Uploading Code](#uploading-code)
+    - [PlatformIO](#platformio)
+        - [Download VS Code](#download-vs-code)
+        - [Install PlatformIO](#install-platformio-extension)
+        - [Set up Project](#set-up-project)
+        - [Install Libraries](#install-libraries)
+        - [Uploading Code](#upload-code-1)
+    - [Starter Code](#starter-code)
+        - [Hello World](#hello-world)
+        - [M5Stack Examples](#m5stack-examples)
+
 - [M5StickC-Plus with Arduino IDE](https://media.ed.ac.uk/media/Programming%20M5StickC%20Plus%20with%20Arduino%20IDE%202.0/1_uysgibv8)
 - [M5StickC-Plus with PlatformIO](https://media.ed.ac.uk/media/Programming%20M5StickC%20Plus%20with%20PlatformIO/1_chpql4of)
 - [Printing Text to the LCD Display](https://media.ed.ac.uk/media/Printing%20Text%20%20to%20the%20M5StickCPlus%20LCD%20Display/1_06kr2wpx)
@@ -109,7 +129,7 @@ After installing PlatformIO, a new tab should appear on the left side of the IDE
 
 ![](images/PlatformIO_Tab.PNG)
 
-Open the tab and select either *Create New Project* or *Home*. From here you can create a new project and give it a name.
+Open the tab and select either *Create New Project* or *Open*. From here you can create a new project and give it a name.
 
 ![](images/PlatformIO_NewProject.gif)
 
@@ -139,7 +159,42 @@ To upload, select the Upload icon at the bottom-left of the IDE.
 
 ![](images/PlatformIO_Upload.gif)
 
+If you see any error messages pop up in the console, ensure you have followed all of the previous steps correctly. If you are still being shown error messages and are unsure of why, feel free to contact support via email: DigiDevECA@ed.ac.uk.
+
 ## Starter Code
 ### Hello World
-### M5Stack Examples
+To get started programming the M5StickC-Plus, a simple "Hello World" sketch might be a nice place to start.
 
+First of all, for every M5StickC-Plus project, you should include the M5StickCPlus library at the top of the code.
+
+''' cpp
+#include <M5StickCPlus.h>
+'''
+
+You should also include the <code>M5.begin()</code> function inside the <code>setup()</code> function. This will initialize all of the onboard components (LCD, buttons, IMU etc).
+
+''' cpp
+void setup() {
+    M5.begin();
+}
+'''
+
+To print to the LCD, we can use the <code>M5.Lcd.print()</code> function givee to us by the M5StickCPlus library. To make sure we are not printing anything too quickly, we can add a short delay to the <code>loop()</code> function also.
+
+''' cpp
+void loop() {
+    M5.Lcd.print("Hello World");
+    delay(1000);
+}
+'''
+
+This short sketch should print out the words "Hello World" to the LCD screen every second.
+
+### M5Stack Examples
+The M5StickCPlus library contains examples that we can use to immediately start programming the M5StickC-Plus. These examples include tutorials on how to use some of the functions in the M5StickCPlus library as well as some games that you can try out.
+
+In the Arduino IDE, these examples can bee found under:
+- Windows: File -> Examples -> M5StickCPlus
+- Mac:     Arduino -> Examples -> M5StickCPlus
+
+In PlatformIO yu will have to navigate into the library directory to find these examples. Inside your project folder, navigate to .pio -> libdeps -> m5stick-c -> M5StickCPlus -> examples. Make sure that you have [installed the library to that project](#install-libraries).
