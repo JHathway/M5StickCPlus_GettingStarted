@@ -198,26 +198,26 @@ To get started programming the M5StickC-Plus, a simple "Hello World" sketch migh
 
 First of all, for every M5StickC-Plus project, you should include the M5StickCPlus library at the top of the code.
 
-''' cpp
+``` cpp
 #include <M5StickCPlus.h>
-'''
+```
 
 You should also include the <code>M5.begin()</code> function inside the <code>setup()</code> function. This will initialize all of the onboard components (LCD, buttons, IMU etc).
 
-''' cpp
+``` cpp
 void setup() {
     M5.begin();
 }
-'''
+```
 
 To print to the LCD, we can use the <code>M5.Lcd.print()</code> function givee to us by the M5StickCPlus library. To make sure we are not printing anything too quickly, we can add a short delay to the <code>loop()</code> function also.
 
-''' cpp
+``` cpp
 void loop() {
     M5.Lcd.print("Hello World");
     delay(1000);
 }
-'''
+```
 
 This short sketch should print out the words "Hello World" to the LCD screen every second.
 
